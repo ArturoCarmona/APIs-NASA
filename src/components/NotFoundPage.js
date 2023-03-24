@@ -3,8 +3,8 @@ import NotFound from "../assets/404.png";
 
 function NotFoundPage() {
   return (
-    <div>
-      <img src={NotFound} alt="NotFound-img"></img>
+    <div id="div-not-found">
+      <img src={NotFound} alt="NotFound-img" id="img-not-found"></img>
     </div>
   );
 }
