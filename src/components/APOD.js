@@ -1,7 +1,4 @@
-import {
-  LitElement,
-  html,
-} from "https://unpkg.com/@polymer/lit-element@latest/lit-element.js?module";
+import { LitElement, html } from "lit-element";
 import api from "./Api.js";
 
 export class Apod extends LitElement {
