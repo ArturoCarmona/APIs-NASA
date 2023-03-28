@@ -1,5 +1,6 @@
 import "./App.css";
 import "./components/APOD.js";
+import "./components/NeoWs.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home.js";
 import Navbar from "./components/Navbar.js";
@@ -16,6 +17,10 @@ function App() {
           <Route
             path="/APOD"
             element={<apod-component></apod-component>}
+          ></Route>
+          <Route
+            path="/NeoWs"
+            element={<neows-component></neows-component>}
           ></Route>
           <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
         </Routes>

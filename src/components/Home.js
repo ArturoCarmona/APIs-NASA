@@ -23,6 +23,11 @@ function Home() {
               🚀 Astronomy Picture of the Day 🚀{" "}
             </a>
           </li>
+          <li>
+            <a href="/NeoWs" id="item-list-home">
+              🚀 Asteroids - NeoWs 🚀{" "}
+            </a>
+          </li>
         </ul>
       </div>
     </div>

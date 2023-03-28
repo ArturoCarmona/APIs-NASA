@@ -27,6 +27,11 @@ function Navbar() {
                   APOD
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/NeoWs">
+                  NeoWs
+                </a>
+              </li>
             </ul>
           </div>
         </div>
