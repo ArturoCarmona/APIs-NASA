@@ -46,17 +46,6 @@ export class Apod extends LitElement {
         }
       })
       .catch((error) => console.log("error: ", error));
-
-    /* fetch(URL)
-      .then((response) => {response.json()})
-      .then((dataResponse) => {
-        
-        this.data = dataResponse;
-        this.inactive = false;
-        this.available = true;
-        this.requestUpdate();
-      })
-      .catch((error) => console.log("error: ", error)); */
   }
 
   doChange(e) {
@@ -107,7 +96,15 @@ export class Apod extends LitElement {
             box-shadow: 0px 0px 10px 1px black;
           }
         }
-
+        .btn {
+          font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+          border-radius: 6px;
+          padding: 6px 14px;
+          border: none;
+          color: #fff;
+          background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+          background-origin: border-box;
+        }
         p {
           text-align: justify;
           padding-right: 15%;
@@ -118,7 +115,7 @@ export class Apod extends LitElement {
       <div class="container">
         <h1>Astronomy Picture of the Day</h1>
         <input type="date" id="date" @change="${this.doChange}" />
-        <button @click=${this.getDataAPOD}>Search</button>
+        <button class="btn" @click=${this.getDataAPOD}>Search</button>
         ${this.inactive
           ? html` <div>
               <p>

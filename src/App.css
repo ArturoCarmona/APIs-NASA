@@ -4,3 +4,7 @@ h1 {
 h3 {
   color: blue;
 }
+body {
+  position: relative;
+  min-height: 100vh;
+}

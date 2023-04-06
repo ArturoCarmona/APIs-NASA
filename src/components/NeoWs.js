@@ -33,7 +33,6 @@ export class NeoWs extends LitElement {
       .then((response) => {
         if (response.ok) {
           response.json().then((dataResponse) => {
-            console.log(dataResponse.near_earth_objects);
             this._data = dataResponse.near_earth_objects;
             this.active = true;
             this.requestUpdate();
@@ -55,7 +54,6 @@ export class NeoWs extends LitElement {
       });
     });
     this.requestUpdate();
-    console.log(this.asteroid);
   }
 
   doChangeIni(e) {
