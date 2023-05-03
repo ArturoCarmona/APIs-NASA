@@ -59,6 +59,8 @@ export class Apod extends LitElement {
         .container {
           text-align: center;
           justify-content: center;
+          padding-bottom: 100px;
+          min-height: calc(100%-80px);
         }
         h1 {
           color: red;

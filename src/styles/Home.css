@@ -1,7 +1,24 @@
 .home {
   justify-content: center;
   text-align: center;
-  padding: 20%;
+}
+
+@media (max-width: 412px) {
+  .home {
+    padding-top: 50%;
+  }
+}
+@media ((min-width: 413px) and (max-width: 912px)) {
+  .home {
+    padding: 20%;
+  }
+}
+
+@media (min-width: 913px) {
+  .home {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 576px) {

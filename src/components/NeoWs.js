@@ -65,20 +65,39 @@ export class NeoWs extends LitElement {
     this.requestUpdate();
   }
 
+  newSearch() {
+    this.active = false;
+    this.requestUpdate();
+  }
+
   render() {
     return html`
       <style>
         .container {
           text-align: center;
           justify-content: center;
+          padding-bottom: 100px;
+          min-height: calc(100%-80px);
         }
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          margin-left: 5%;
-          margin-right: 5%;
-          margin-top: 20px;
-          margin-bottom: 20px;
+        @media (max-width: 667px) {
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+        @media (min-width: 668px) {
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
         }
         td,
         th {
@@ -86,7 +105,10 @@ export class NeoWs extends LitElement {
           text-align: center;
           padding: 8px;
         }
-
+        th {
+          background-color: black;
+          color: white;
+        }
         tr:nth-child(even) {
           background-color: gray;
         }
@@ -143,6 +165,11 @@ export class NeoWs extends LitElement {
           : this.active
           ? html`
               <div>
+                <div class="div-btn">
+                  <button class="btn" @click=${this.newSearch}>
+                    New search
+                  </button>
+                </div>
                 <table>
                   <thead>
                     <tr>
@@ -187,21 +214,29 @@ export class NeoWs extends LitElement {
                 id="img-nasa"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png"
               />
+              <div>
+                <h6>Choose a range no longer than 7 days</h6>
+              </div>
+              <div class="div-date">
+                <label>Start</label>
+                <input
+                  type="date"
+                  id="date_ini"
+                  @change="${this.doChangeIni}"
+                />
+              </div>
+              <div class="div-date">
+                <label>Finish</label>
+                <input
+                  type="date"
+                  id="date_fin"
+                  @change="${this.doChangeFin}"
+                />
+              </div>
+              <div class="div-btn">
+                <button class="btn" @click=${this.getDataNeoWs}>Search</button>
+              </div>
             </div>`}
-        <div>
-          <h6>Choose a range no longer than 7 days</h6>
-        </div>
-        <div class="div-date">
-          <label>Start</label>
-          <input type="date" id="date_ini" @change="${this.doChangeIni}" />
-        </div>
-        <div class="div-date">
-          <label>Finish</label>
-          <input type="date" id="date_fin" @change="${this.doChangeFin}" />
-        </div>
-        <div class="div-btn">
-          <button class="btn" @click=${this.getDataNeoWs}>Search</button>
-        </div>
       </div>
     `;
   }

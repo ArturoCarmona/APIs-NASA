@@ -4,7 +4,7 @@ import "../styles/Home.css";
 function Home() {
   return (
     <div className="home">
-      <h1>APIs NASA</h1>
+      <h1>API´s NASA</h1>
       <div className="img">
         <img
           id="img-nasa"

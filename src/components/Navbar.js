@@ -32,6 +32,16 @@ function Navbar() {
                   NeoWs
                 </a>
               </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  href="https://i-am-ing-arturogc.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Portafolio Web
+                </a>
+              </li>
             </ul>
           </div>
         </div>
