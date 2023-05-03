@@ -83,6 +83,8 @@ export class NeoWs extends LitElement {
           table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
+            display: block;
+            overflow-x: auto;
             margin-left: 1%;
             margin-right: 1%;
             margin-top: 20px;
