@@ -1,4 +1,4 @@
-const API_KEY = "g2ce5MMwazgQen7fufPPY8UWPsNW5nc1AgjAgZqc";
+const API_KEY = "DEMO_KEY";
 const RUTA = "https://api.nasa.gov/planetary/apod?api_key=";
 const RUTA_NEOWS =
   "https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=";
